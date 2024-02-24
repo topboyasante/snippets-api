@@ -78,9 +78,9 @@ Contributions are what make the open-source community such an amazing place to l
 ### Pull Requests
 
 1. Fork the Project
-2. Create your Feature Branch (`bun branch feature/AmazingFeature`)
-3. Commit your Changes (`bun commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`bun push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git branch feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ### Pull Request Guidelines
