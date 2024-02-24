@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id         String     @id @default(uuid())
+  email      String     @unique
+  full_name  String
+  username   String?
+  password   String
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  snippets   snippets[]
+
+  @@index([id], map: "ix_users_id")
+}
+
+model snippets {
+  id          String     @id @default(uuid())
+  label       String
+  description String?
+  content     String
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+  user_id     String
+  language_id String
+  user        users      @relation(fields: [user_id], references: [id])
+  languages   languages? @relation(fields: [language_id], references: [id])
+
+
+  @@index([id], map: "ix_snippets_id")
+}
+
+model languages {
+  id         String     @id @default(uuid())
+  name       String
+  snippets   snippets[]
+
+  @@index([id], map: "ix_languages_id")
+}
