@@ -5,7 +5,7 @@ const authRouter = express.Router();
 
 authRouter.post("/login", postAuthLogin);
 authRouter.post("/signup", PostAuthSignUp);
-authRouter.get("/isUsernameExists", getUsernameExistStatus);
+authRouter.get("/is-username-exists", getUsernameExistStatus);
 authRouter.get("/refresh", PostAuthRefresh);
 
 export default authRouter;

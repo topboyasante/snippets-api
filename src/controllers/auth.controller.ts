@@ -85,7 +85,6 @@ export const PostAuthSignUp = async (
       password: hashedPassword,
     };
 
-    console.log("HERE")
     const db_user = await createUser(newUser);
     
     const tokenPayload = { id: db_user.id, email: db_user.email };

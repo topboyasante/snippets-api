@@ -7,7 +7,6 @@ export const createUser = async (user: IUserCreate) => {
       ...user,
     },
   });
-  console.log("Here but inside")
   
   return newUser;
 };
