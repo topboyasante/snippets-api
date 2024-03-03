@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  return res.send("Snippest API v1.0.0")
+  return res.send("Snippets API v1.0.0")
 });
 
 app.use("/v1", v1_api);
