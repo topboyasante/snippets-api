@@ -1,3 +1,6 @@
+import type { z } from "zod";
+import type { userCreateSchema, userLoginSchema } from "../schema/users.schema";
+
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -6,3 +9,6 @@ declare global {
     }
   }
 }
+
+export type IUserLogin = z.infer<typeof userLoginSchema>;
+export type IUserCreate = z.infer<typeof userCreateSchema>;

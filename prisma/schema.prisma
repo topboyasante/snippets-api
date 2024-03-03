@@ -17,7 +17,7 @@ model users {
   id         String     @id @default(uuid())
   email      String     @unique
   full_name  String
-  username   String?
+  username   String     @unique
   password   String
   created_at DateTime   @default(now())
   updated_at DateTime   @updatedAt

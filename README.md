@@ -14,7 +14,7 @@ Welcome to the Snippets API, an innovative open-source project crafted to simpli
 
 Before setting up the project, ensure you have the following installed:
 
-- Bun (Visit [Bun.sh](https://bun.sh/) for installation instructions)
+- Bun (Version 1.0.29 or later. Visit [Bun.sh](https://bun.sh/) for installation instructions)
 - PostgreSQL (Version 12 or later)
 
 ## Setup
