@@ -1,11 +1,10 @@
 import express from "express";
+import { DeleteUser, GetCurrentUserDetails, PutUserDetails } from "../../controllers/users.controller";
 
 const usersRouter = express.Router();
 
-usersRouter.get("/", () => {});
-usersRouter.get("/me", () => {});
-usersRouter.get("/:id", () => {});
-usersRouter.put("/:id", () => {});
-usersRouter.delete("/:id", () => {});
+usersRouter.get("/me", GetCurrentUserDetails);
+usersRouter.put("/:id", PutUserDetails);
+usersRouter.delete("/:id", DeleteUser);
 
 export default usersRouter;
