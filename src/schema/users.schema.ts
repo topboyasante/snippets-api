@@ -48,3 +48,8 @@ export const userLoginSchema = z.object({
 export const getUsernameQuerySchema = z.object({
   username: z.string().min(3),
 });
+
+export const userUpdateSchema = userCreateSchema.omit({
+  password: true,
+  email: true,
+}).partial()
