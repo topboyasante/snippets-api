@@ -1,18 +1,25 @@
 {
   "name": "snippets-api",
   "module": "index.ts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "bun src/index.ts",
-    "dev": "bun --hot src/index.ts"
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "bun:start": "bun src/index.ts",
+    "bun:dev": "bun --hot src/index.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bun": "latest",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/morgan": "^1.9.9"
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.30",
+    "bun": "^1.0.33",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
